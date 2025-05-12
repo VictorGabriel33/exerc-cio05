@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatinho</title>
+</head>
+<body>
+
+    <h1 id="nome_pet">Gatinho Fofo</h1> 
+    <h2 id="subtitulo_gatinho"></h2> 
+    <br>
+    <img id="foto_pet" src="gato_vg.jpg" alt="Um gatinho fofo qualquer" style="width:300px; height:auto;"> <!-- Corrigi o ID e a variável da imagem -->
+    <p>Descrição:</p>
+    <p id="descricao_pet"></p>
+
+    <script>
+        let data;
+
+        async function mostrarGatinhoFofo() {
+            try {
+       
+                data = {
+                    nome: "Gatinho Fofo",
+                    descricao: "Curioso, brincalhão e sempre pronto para um carinho.",
+                    imagem: "gato_vg.jpg" 
+                };
+                console.log(data);
+
+             
+                document.getElementById('nome_pet').innerHTML = data.nome;
+                document.getElementById('descricao_pet').innerHTML = data.descricao;
+                document.getElementById('foto_pet').src = data.imagem;
+
+            } catch (error) {
+                console.error("Erro ao carregar dados:", error);
+            }
+        }
+
+       
+        mostrarGatinhoFofo();
+    </script>
+
+</body>
+</html>
